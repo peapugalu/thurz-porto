@@ -3,103 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThurZ | AndromedaDEV</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ThurZ | AndromedaDEV Cosmic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://i.imgur.com/andromeda-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
-    <div class="galaxy-cursor"></div>
+    <!-- Cosmic Background Elements -->
+    <div id="particles-js"></div>
     <div class="stars"></div>
     <div class="twinkling"></div>
     
-    <header class="andromeda-header">
-        <nav>
-            <div class="logo">🚀 <span>ThurZ</span> | AndromedaDEV</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-pulse">Home</a></li>
-                <li><a href="#about" class="nav-pulse">About</a></li>
-                <li><a href="#skills" class="nav-pulse">Skills</a></li>
-                <li><a href="#projects" class="nav-pulse">Projects</a></li>
-                <li><a href="#contact" class="nav-pulse">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="cosmic-line"></div>
-                <div class="cosmic-line"></div>
-                <div class="cosmic-line"></div>
-            </div>
-        </nav>
-    </header>
-
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="cosmic-text">Halo Semesta! <br>Saya <span class="typing" data-words='["ThurZ", "AndromedaDEV", "Web Developer", "Coffee Addict"]'></span></h1>
-            <p class="hero-subtitle">Membuat kode dengan ♥ dan sedikit chaos terkendali</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-pulsar">Lihat Projek</a>
-                <a href="#contact" class="btn-neon">Kirim Pesan</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://i.imgur.com/space-coder.png" alt="Astronaut coding" class="floating-astronaut">
-            <div class="planet-decoration"></div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title cosmic-title">Tentang <span>Saya</span> 🌌</h2>
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://i.imgur.com/space-avatar.png" alt="ThurZ Avatar" class="cosmic-rotate">
-                    <div class="orbit-dots"></div>
-                </div>
-                <div class="about-text">
-                    <h3>Bukan Developer Biasa!</h3>
-                    <p>Anggota aktif AndromedaDEV yang selalu mencari tantangan baru di alam semesta pemrograman. Saya percaya setiap bug adalah kesempatan untuk belajar (dan sedikit bergumam pelan).</p>
-                    
-                    <div class="cosmic-facts">
-                        <h4>🚀 Fakta Cosmic:</h4>
-                        <ul>
-                            <li>💻 Bisa debugging sambil tidur (kadang mimpi debugging)</li>
-                            <li>☕ Menghasilkan lebih banyak kode setelah minum kopi ketiga</li>
-                            <li>🎮 Membuat game sederhana sebagai proyek weekend</li>
-                            <li>📚 Selalu punya 5+ buku teknis yang sedang "dibaca"</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="andromeda-badge">
-                        <img src="https://i.imgur.com/andromeda-badge.png" alt="AndromedaDEV Badge">
-                        <span>Resmi Certified AndromedaDEV Member</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lanjutan sections (skills, projects, contact) -->
+    <!-- Floating Planets -->
+    <div class="planet planet-1"></div>
+    <div class="planet planet-2"></div>
+    <div class="planet planet-3"></div>
     
-    <footer class="cosmic-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>ThurZ | AndromedaDEV</h3>
-                    <p>Kode hari ini, bug besok, kopi selalu</p>
+    <!-- Main Container -->
+    <div class="cosmic-container">
+        <!-- Header -->
+        <header class="cosmic-header">
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">ThurZ</span>
+                    <span class="logo-badge">AndromedaDEV</span>
                 </div>
-                <div class="footer-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                </div>
+                
+                <nav class="cosmic-nav">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link cosmic-hover">Home</a></li>
+                        <li><a href="#about" class="nav-link cosmic-hover">About</a></li>
+                        <li><a href="#skills" class="nav-link cosmic-hover">Skills</a></li>
+                        <li><a href="#projects" class="nav-link cosmic-hover">Projects</a></li>
+                        <li><a href="#contact" class="nav-link cosmic-hover">Contact</a></li>
+                    </ul>
+                    
+                    <div class="burger">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                </nav>
             </div>
-            <div class="footer-copyright">
-                <p>&copy; 2023 ThurZ - AndromedaDEV Squad. All rights reserved.</p>
-                <p>Made with ♥ and too much coffee</p>
-            </div>
-        </div>
-    </footer>
+        </header>
 
-    <script src="script.js"></script>
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="cosmic-title">
+                            <span class="title-greeting">Hello Cosmos!</span>
+                            <span class="title-name">I'm <span class="typing" data-words='["ThurZ", "a Developer", "a Creator", "an AndromedaDEV"]'></span></span>
+                        </h1>
+                        <p class="hero-subtitle">Crafting digital experiences that are out of this world</p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary cosmic-hover">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary cosmic-hover">
+                                <span>Contact Me</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="astronaut-container">
+                            <img src="img/astronaut.png" alt="Astronaut ThurZ" class="astronaut floating">
+                            <div class="astronaut-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="scroller"></div>
+                    </div>
+                    <span>Scroll Down</span>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section section-dark">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <span class="title-number">01.</span>
+                        <span>About Me</span>
+                        <div class="title-line"></div>
+                    </h2>
+                    
+                    <div class="about-grid">
+                        <div class="about-image">
+                            <div class="image-container">
+                                <img src="img/profile.jpg" alt="ThurZ" class="profile-image">
+                                <div class="image-border"></div>
+                                <div class="image-dots"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-content">
+                            <div class="about-text">
+                                <p>Hey there! I'm ThurZ, a passionate developer from the AndromedaDEV squad. I specialize in creating immersive digital experiences that push boundaries.</p>
+                                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good sci-fi movie.</p>
+                            </div>
+                            
+                            <div class="about-skills">
+                                <h3>Tech I Work With:</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">WebGL</span>
+                                    <span class="skill-tag">Three.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <span class="title-number">02.</span>
+                        <span>My Skills</span>
+                        <div class="title-line"></div>
+                    </h2>
+                    
+                    <div class="skills-grid">
+                        <!-- Skill Item 1 -->
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h3 class="skill-title">JavaScript</h3>
+                            <p class="skill-description">Bringing interactivity to the cosmic web</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 90%"></div>
+                                <span class="level-percent">90%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item 2 -->
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h3 class="skill-title">React</h3>
+                            <p class="skill-description">Building stellar component-based UIs</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 85%"></div>
+                                <span class="level-percent">85%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item 3 -->
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h3 class="skill-title">Node.js</h3>
+                            <p class="skill-description">Powering the backend universe</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 80%"></div>
+                                <span class="level-percent">80%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item 4 -->
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="skill-title">Database</h3>
+                            <p class="skill-description">Storing galactic amounts of data</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 75%"></div>
+                                <span class="level-percent">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section section-dark">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <span class="title-number">03.</span>
+                        <span>My Projects</span>
+                        <div class="title-line"></div>
+                    </h2>
+                    
+                    <div class="projects-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/project1.jpg" alt="Cosmic Explorer">
+                                <div class="project-overlay">
+                                    <h3>Cosmic Explorer</h3>
+                                    <p>Interactive 3D space visualization</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="#" class="project-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Cosmic Explorer</h3>
+                                <div class="project-tags">
+                                    <span>Three.js</span>
+                                    <span>WebGL</span>
+                                    <span>React</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/project2.jpg" alt="Nebula Dashboard">
+                                <div class="project-overlay">
+                                    <h3>Nebula Dashboard</h3>
+                                    <p>Real-time data visualization</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="#" class="project-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Nebula Dashboard</h3>
+                                <div class="project-tags">
+                                    <span>D3.js</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/project3.jpg" alt="Andromeda CLI">
+                                <div class="project-overlay">
+                                    <h3>Andromeda CLI</h3>
+                                    <p>Developer productivity tool</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="#" class="project-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Andromeda CLI</h3>
+                                <div class="project-tags">
+                                    <span>Node.js</span>
+                                    <span>TypeScript</span>
+                                    <span>Oclif</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-footer">
+                        <a href="#" class="btn btn-primary cosmic-hover">
+                            <span>View All Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="section-container">
+                    <h2 class="section-title">
+                        <span class="title-number">04.</span>
+                        <span>Get In Touch</span>
+                        <div class="title-line"></div>
+                    </h2>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>Let's talk about the universe!</h3>
+                            <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+                            
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span>Email Me</span>
+                                        <a href="mailto:thurz@andromedadev.com">thurz@andromedadev.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fab fa-discord"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span>Discord</span>
+                                        <a href="#">ThurZ#1234</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span>GitHub</span>
+                                        <a href="https://github.com/thurz">@ThurZ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <form id="cosmicForm">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                    <label for="message">Your Message</label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary cosmic-hover">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="cosmic-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-icon">🚀</span>
+                            <span class="logo-text">ThurZ</span>
+                        </div>
+                        <p>Exploring the digital universe one line of code at a time</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="link-group">
+                            <h4>Connect</h4>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 ThurZ | AndromedaDEV. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> in the cosmos</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top cosmic-hover">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
